@@ -1,6 +1,6 @@
 {
   "name": "@kaskenov/vue-text-overflow",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "./dist/vue-text-overflow.umd.js",
   "module": "./dist/vue-text-overflow.es.js",
@@ -39,6 +39,9 @@
     "vite-plugin-dts": "^4.5.4",
     "vue-eslint-parser": "^10.2.0",
     "vue-tsc": "^3.0.7"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a"
 }
