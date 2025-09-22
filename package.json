@@ -1,7 +1,6 @@
 {
   "name": "@kaskenov/vue-text-overflow",
-  "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "./dist/vue-text-overflow.umd.js",
   "module": "./dist/vue-text-overflow.es.js",
