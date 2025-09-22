@@ -12,7 +12,11 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       tsconfigPath: './tsconfig.app.json',
-      include: ['./src/components/**/*.*'],
+      include: [
+        'src/components/**/*.vue',
+        'src/components/**/*.ts',
+        'src/lib.ts',
+      ],
     }),
   ],
   build: {
