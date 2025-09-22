@@ -1,5 +1,5 @@
 # @kaskenov/vue-text-overflow
-responsive text clamping components for Vue 3 — with optional expand/collapse toggle.
+Responsive text clamping components for Vue 3 — with optional expand/collapse toggle.
 
 Easily clamp overflowing text to a specified number of lines, with built-in support for “Show more / Show less” functionality. Perfect for cards, modals, tooltips, and anywhere you need text truncation.
 
@@ -7,6 +7,10 @@ Easily clamp overflowing text to a specified number of lines, with built-in supp
 [![TypeScript](https://img.shields.io/badge/TypeScript-✔-blue)](https://www.typescriptlang.org/)
 [![PNPM](https://img.shields.io/badge/pnpm-✔-f69220.svg?logo=pnpm)](https://pnpm.io/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## Demo
+
+[Github Pages](https://kaskenov.github.io/vue-text-overflow/)
 
 ## Usage
 
