@@ -1,6 +1,9 @@
 import type { VueTextOverflowProps } from '@/components/VueTextOverflow';
 
-export type VueTextOverflowExpandableProps<T extends Record<string, any> = Record<string, any>> = VueTextOverflowProps<T> & {
+export type VueTextOverflowExpandableProps<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  T extends Record<string, any> = Record<string, any>,
+> = VueTextOverflowProps<T> & {
   modelValue?: boolean;
   expandButtonLabel?: string;
   collapseButonLabel?: string;

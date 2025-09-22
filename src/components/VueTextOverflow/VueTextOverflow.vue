@@ -1,4 +1,8 @@
-<script setup lang="ts" generic="T extends Record<string, any> = Record<string, any>">
+<script
+  setup
+  lang="ts"
+  generic="T extends Record<string, any> = Record<string, any>"
+>
 import { VUE_TEXT_OVERFLOW_DEFAULT_PROPS } from './VueTextOverflow.constants';
 import type { VueTextOverflowProps } from './VueTextOverflow.types';
 
