@@ -1,0 +1,37 @@
+name: publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: node setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: pnpm setup
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10
+
+      - name: install
+        run: pnpm i --frozen-lockfile
+
+      - name: build
+        run: pnpm build:lib
+
+      - name: publish
+        run: pnpm publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

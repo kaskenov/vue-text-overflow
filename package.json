@@ -1,5 +1,5 @@
 {
-  "name": "vue-text-overflow",
+  "name": "@kaskenov/vue-text-overflow",
   "private": true,
   "version": "0.1.0",
   "type": "module",
