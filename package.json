@@ -3,11 +3,11 @@
   "version": "0.1.2",
   "type": "module",
   "main": "./dist/vue-text-overflow.umd.js",
-  "module": "./dist/vue-text-overflow.es.js",
+  "module": "./dist/vue-text-overflow.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-text-overflow.es.js",
+      "import": "./dist/vue-text-overflow.js",
       "require": "./dist/vue-text-overflow.umd.js"
     }
   },
