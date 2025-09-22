@@ -8,6 +8,13 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -28,10 +35,27 @@ jobs:
       - name: install
         run: pnpm i --frozen-lockfile
 
-      - name: build
+      - name: build lib
         run: pnpm build:lib
 
       - name: publish
         run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: build app
+        run: pnpm build:app
+
+      - name: pages setup
+        uses: actions/configure-pages@v4
+        with:
+          static_site_generator: "vite"
+
+      - name: upload
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './app'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
