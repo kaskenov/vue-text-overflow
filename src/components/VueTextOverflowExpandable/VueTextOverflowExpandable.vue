@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T extends Record<string, any> = Record<string, any>">
 import { VueTextOverflow } from '@/components/VueTextOverflow';
 import type {
   VueTextOverflowExpandableProps,
@@ -15,7 +15,7 @@ import {
 } from 'vue';
 
 const props = withDefaults(
-  defineProps<VueTextOverflowExpandableProps>(),
+  defineProps<VueTextOverflowExpandableProps<T>>(),
   VUE_TEXT_OVERFLOW_EXPANDABLE_DEFAULT_PROPS,
 );
 const emit = defineEmits<VueTextOverflowExpandableEmits>();
@@ -65,7 +65,7 @@ onMounted(async () => {
 
 <template>
   <div class="vue-text-overflow-expandable">
-    <VueTextOverflow ref="container" :lines="linesNumber" :tagname="tagname">
+    <VueTextOverflow ref="container" :lines="linesNumber" :component="component" :component-props="componentProps">
       <slot />
     </VueTextOverflow>
     <slot v-if="showButton" name="activator" :onClick="handleExpandButtonClick">

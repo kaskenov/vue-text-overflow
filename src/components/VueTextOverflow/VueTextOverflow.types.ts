@@ -1,4 +1,7 @@
-export interface VueTextOverflowProps {
+import type { Component } from "vue";
+
+export interface VueTextOverflowProps<T extends Record<string, any> = Record<string, any>> {
   lines?: number;
-  tagname?: string;
+  component?: string | Component;
+  componentProps?: T;
 }

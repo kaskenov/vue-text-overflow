@@ -1,6 +1,6 @@
 import type { VueTextOverflowProps } from './VueTextOverflow.types';
 
-export const VUE_TEXT_OVERFLOW_DEFAULT_PROPS: VueTextOverflowProps = {
+export const VUE_TEXT_OVERFLOW_DEFAULT_PROPS = {
   lines: 1,
-  tagname: 'p',
-};
+  component: 'p',
+} satisfies VueTextOverflowProps;

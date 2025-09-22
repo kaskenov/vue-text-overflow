@@ -34,8 +34,8 @@ const vueTextOverflowExpandablePropsModel = ref<VueTextOverflowExpandableProps>(
             v-model="vueTextOverflowPropsModel.lines"
         /></label>
         <label
-          >tagname
-          <input type="text" v-model="vueTextOverflowPropsModel.tagname"
+          >component
+          <input type="text" v-model="vueTextOverflowPropsModel.component"
         /></label>
         <VueTextOverflow v-bind="vueTextOverflowPropsModel">{{
           LOREM
@@ -51,10 +51,10 @@ const vueTextOverflowExpandablePropsModel = ref<VueTextOverflowExpandableProps>(
             v-model="vueTextOverflowExpandablePropsModel.lines"
         /></label>
         <label
-          >tagname
+          >component
           <input
             type="text"
-            v-model="vueTextOverflowExpandablePropsModel.tagname"
+            v-model="vueTextOverflowExpandablePropsModel.component"
         /></label>
         <label
           >hide-button

@@ -1,16 +1,17 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T extends Record<string, any> = Record<string, any>">
 import { VUE_TEXT_OVERFLOW_DEFAULT_PROPS } from './VueTextOverflow.constants';
 import type { VueTextOverflowProps } from './VueTextOverflow.types';
 
 withDefaults(
-  defineProps<VueTextOverflowProps>(),
+  defineProps<VueTextOverflowProps<T>>(),
   VUE_TEXT_OVERFLOW_DEFAULT_PROPS,
 );
 </script>
 
 <template>
   <Component
-    :is="tagname"
+    :is="component"
+    v-bind="componentProps"
     ref="container"
     class="vue-text-overflow"
     :class="{
