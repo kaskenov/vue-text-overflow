@@ -1,0 +1,12 @@
+.vue-text-overflow-expandable {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__expand-button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+}
