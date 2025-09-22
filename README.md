@@ -32,8 +32,13 @@ generic=T extends Record<string, any> = Record<string, any>
 |prop|description|type|default|
 |---|---|---|---|
 |lines|Number of lines to clamp to|number|1|
-|component|HTML tag or Vue component to render|[string, Component]|'p'|
+|component|HTML tag or Vue component to render|string \| Component|'p'|
 |componentProps|Props to pass to the component|T|{}|
+
+### Slots
+|name|description|props|
+|---|---|---|
+|default|Main content to be clamped|  |
 
 ## VueTextOverflowExpandable
 generic=T extends Record<string, any> = Record<string, any>
@@ -41,9 +46,21 @@ generic=T extends Record<string, any> = Record<string, any>
 |prop|description|type|default|
 |---|---|---|---|
 |lines|Number of lines to clamp to|number|1|
-|component|HTML tag or Vue component to render|[string, Component]|'p'|
+|component|HTML tag or Vue component to render|string \| Component|'p'|
 |componentProps|Props to pass to the component|T|{}|
 |modelValue|Controls expanded state|boolean|false|
 |expandButtonLabel|Label for “expand” button|string|'Show more'|
 |collapseButonLabel|Label for “collapse” button|string|'Show less'|
 |hideButton|Hide toggle button |boolean|false|
+
+### Emits
+
+|event|description|payload|
+|---|---|---|
+|update:modelValue|Emitted when expanded state changes|boolean|
+
+### Slots
+|name|description|props|
+|---|---|---|
+|default|Main content to be clamped|  |
+|activator|Customize the toggle button|{ onClick: Function }|
