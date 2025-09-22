@@ -48,8 +48,6 @@ jobs:
 
       - name: pages setup
         uses: actions/configure-pages@v4
-        with:
-          static_site_generator: "vite"
 
       - name: upload
         uses: actions/upload-pages-artifact@v3
