@@ -21,6 +21,7 @@ pnpm add @kaskenov/vue-text-overflow
 ```vue
 <script setup lang="ts">
 import { VueTextOverflow } from '@kaskenov/vue-text-overflow';
+import '@kaskenov/vue-text-overflow/styles.css';
 </script>
 
 <template>
