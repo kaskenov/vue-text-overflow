@@ -1,7 +1,27 @@
 {
   "name": "@kaskenov/vue-text-overflow",
-  "version": "0.1.4",
+  "version": "0.1.5",
+  "author": {
+    "name": "Pavel Kaskenov",
+    "email": "p.kaskenov@gmail.com",
+    "url": "https://github.com/kaskenov"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaskenov/vue-text-overflow.git"
+  },
+  "homepage": "https://kaskenov.github.io/vue-text-overflow/",
+  "bugs": {
+    "url": "https://github.com/kaskenov/vue-text-overflow/issues",
+    "email": "p.kaskenov@gmail.com"
+  },
   "type": "module",
+  "keywords": [
+    "vue",
+    "text-overflow",
+    "ellipsis"
+  ],
   "main": "./dist/vue-text-overflow.umd.js",
   "module": "./dist/vue-text-overflow.js",
   "types": "./dist/index.d.ts",
