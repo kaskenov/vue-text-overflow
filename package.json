@@ -1,6 +1,6 @@
 {
   "name": "@kaskenov/vue-text-overflow",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": {
     "name": "Pavel Kaskenov",
     "email": "p.kaskenov@gmail.com",
@@ -34,7 +34,9 @@
     "./styles.css": "./dist/vue-text-overflow.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "dev": "vite -c ./vite.config.ts",
