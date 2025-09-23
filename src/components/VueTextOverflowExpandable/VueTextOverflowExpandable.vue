@@ -32,7 +32,8 @@ const showButton = computed(() => !props.hideButton && ellipsisActive.value);
 
 const linesNumber = computed(() => (expanded.value ? 0 : props.lines));
 
-const checkContainer = () => {
+const checkContainer = async () => {
+  await nextTick();
   if (!container.value) return;
 
   const { scrollWidth, clientWidth, scrollHeight, clientHeight } =
@@ -53,16 +54,21 @@ const handleExpandButtonClick = () => {
 
 watch(
   () => [props.lines, props.hideButton],
-  async () => {
+  () => {
     expand(false);
-    await nextTick();
     checkContainer();
   },
   { immediate: true },
 );
 
-onMounted(async () => {
-  await nextTick();
+watch(
+  () => props.modelValue,
+  (newValue, oldValue) => {
+    if (newValue !== oldValue) expand(newValue);
+  },
+);
+
+onMounted(() => {
   checkContainer();
 });
 </script>
